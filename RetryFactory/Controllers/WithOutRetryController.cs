@@ -4,21 +4,30 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RetryFactory.Models;
-using TryCircuitBreaker.Services;
 
 namespace RetryFactory.Controllers
 {
+    /// <summary>
+    /// A controller to call the calculator without retries
+    /// </summary>
     [Route("api/[controller]")]
     public class WithOutRetryController : Controller
     {
         private readonly HttpClient _httpClient = new HttpClient();
 
-        public WithOutRetryController(ICalculationService calculationservice)
+        /// <summary>
+        /// Creates the controller
+        /// </summary>
+        public WithOutRetryController()
         {
             _httpClient.BaseAddress = new Uri("http://localhost:5000/");
         }
 
-        // GET api/values/5
+        /// <summary>
+        /// Call the calulcation web api without retries
+        /// </summary>
+        /// <param name="toCalculateWith"></param>
+        /// <returns>Calculation result</returns>
         [HttpGet("{toCalculateWith}")]
         public async Task<ActionResult<CalculationResult>> Get(int toCalculateWith)
         {

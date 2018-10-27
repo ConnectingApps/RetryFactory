@@ -4,10 +4,17 @@ using RetryFactory.Models;
 
 namespace RetryFactory.Controllers
 {
+    /// <summary>
+    /// The controller class that simulates an unstable API. It can succeed. It can fail.
+    /// </summary>
     [Route("api/[controller]")]
     public class CalculatorController : Controller
     {
-        // GET api/<controller>/5
+        /// <summary>
+        /// An unstable method to return the result of a calculation
+        /// </summary>
+        /// <param name="toCalculateWith"></param>
+        /// <returns>The result of a calculation</returns>
         [HttpGet("{toCalculateWith}")]
         public ActionResult<CalculationResult> Get(int toCalculateWith)
         {           
