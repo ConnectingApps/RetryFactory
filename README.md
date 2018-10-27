@@ -3,7 +3,7 @@ A demo to explain how the .NET Core factory class for HttpClient can be used in 
 
 ```bash
 git clone https://github.com/ConnectingApps/RetryFactory.git
-cd RetryFactory
+cd RetryFactory/RetryFactory
 docker build -t retryfactoryshow .
 docker run -p 5000:5000 retryfactoryshow
 ```
