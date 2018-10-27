@@ -24,7 +24,8 @@ namespace RetryFactory
         /// <returns></returns>
         public static IWebHostBuilder CreateWebHostBuilder(string[] args)
         {
-            return WebHost.CreateDefaultBuilder(args)
+            return WebHost.CreateDefaultBuilder(args).
+                UseUrls("http://0.0.0.0:5000") // to expose container ports https://docs.docker.com/v17.09/engine/userguide/networking/default_network/binding/
                 .UseStartup<Startup>();
         }
     }
