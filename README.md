@@ -1,5 +1,5 @@
 # RetryFactory
-A demo to explain how the .NET Core factory class for HttpClient can be used in .NET Core 2.1 . Here is the [theory](https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests). And here you can see it in action with a swagger interface. Make sure there is no application using port 5000.
+A demo to explain how the .NET Core factory class for HttpClient can be used in .NET Core 2.1 in order to do resilient calls. Here is the [theory](https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests). And here you can see it in action with a swagger interface. Make sure there is no application using port 5000.
 
 ```bash
 git clone https://github.com/ConnectingApps/RetryFactory.git
